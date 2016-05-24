@@ -73,13 +73,13 @@ const barrels: string[] = [<br>
 •	Open the index.html in the src directory<br>
 o	Add relevant stylesheet links and javascript link to the priming<br>
  
-Lines to add<br>
-•	<link rel="stylesheet" type="text/css" href="vendor/primeui/themes/omega/theme.css" /><br>
-•	<link rel="stylesheet" type="text/css" href="app/resources/icons/css/font-awesome.min.css" /><br>
-•	<link rel="stylesheet" type="text/css" href="vendor/primeui/primeui-ng-all.min.css" /><br><br><br>
+Lines to add<br><p>
+•	"<link rel="stylesheet" type="text/css" href="vendor/primeui/themes/omega/theme.css" />"<br>
+•	"<link rel="stylesheet" type="text/css" href="app/resources/icons/css/font-awesome.min.css" />"<br>
+•	"<link rel="stylesheet" type="text/css" href="vendor/primeui/primeui-ng-all.min.css" />"<br><br><br>
 
-•	<script src="vendor/primeui/primeui-ng-all.min.js"></script><br>
-
+•	"<script src="vendor/primeui/primeui-ng-all.min.js"></script>"<br>
+</p>
 
 Note: need to copy the font awesome resources to the app/resources folder. You can find them in the priming quick start seed project
 <br><br>
