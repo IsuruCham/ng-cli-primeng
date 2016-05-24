@@ -19,9 +19,10 @@ npm i @angular/router-deprecated<br>
   * npm i @angular/router-deprecated<br>
 5. Import the project using intellij IDEA and open the angular-cli-build.js file and add the following lines to the vendorNpmFiles array, <br>
 
+
       ```'primeng/**/*.js', ```<br>
       ```'primeui/**/*.*'``` <br>
-o	The file will look like this after adding the lines <br>
+	The file will look like this after adding the lines <br>
 ```sh
 var Angular2App = require('angular-cli/lib/broccoli/angular2-app');
 
@@ -42,11 +43,10 @@ module.exports = function(defaults) {
 };
 
 ```
-
-6.	Open the system-config.ts in the src directory<br>
-  o	Add 'primeng': 'vendor/primeng' to the const map: any<br>
-  o	Add 'primeng': { defaultExtension: 'js' } to the packages <br>
-  o	Add '@angular/router-deprecated', to barrels<br><br>
+6. Open the system-config.ts in the src directory<br>
+  -Add 'primeng': 'vendor/primeng' to the const map: any<br>
+  -Add 'primeng': { defaultExtension: 'js' } to the packages <br>
+  -Add '@angular/router-deprecated', to barrels<br><br>
 
 The file will look like this after adding those lines<br>
 
