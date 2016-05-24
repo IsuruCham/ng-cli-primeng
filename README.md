@@ -5,13 +5,13 @@ You don't have to follow all these steps if you download this seed project. But 
 npm install
 npm i @angular/router-deprecated
 
-Creating a ng-cli project with primeng from scratch
-Steps  (start cmd in administrator mode)
-•	Create a normal project anywhere using “ng new [project-name]” command in the cmd
-•	Navigate to newly created project folder using “cd [project-name]”
-•	Install priming and primeui using following commands
-o	npm install primeng --save
-o	npm install primeui –save
+Creating a ng-cli project with primeng from scratch <br>
+Steps  (start cmd in administrator mode)<br>
+•	Create a normal project anywhere using “ng new [project-name]” command in the cmd<br>
+•	Navigate to newly created project folder using “cd [project-name]”<br>
+•	Install priming and primeui using following commands<br>
+      o	npm install primeng --save<br>
+      o	npm install primeui –save<br>
 •	We need to use deprecated router module in order to use priming components, so install router-deprecated module also using the following command
 o	npm i @angular/router-deprecated
 •	Import the project using intellij IDEA and open the angular-cli-build.js file and add the following lines to the vendorNpmFiles array
