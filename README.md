@@ -9,12 +9,14 @@ You don't have to follow all these steps if you download this seed project. But 
 npm install<br>
 npm i @angular/router-deprecated<br>
 
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+## If you want to make your own ng-cli-primeng project from scratch
+1. Create a normal project anywhere using “ng new [project-name]” command in the cmd
+2. Navigate to newly created project folder using “cd [project-name]”
+3. Install priming and primeui using following commands<br>
+    1.npm install primeng --save<br>
+    2.npm install primeui –save<br>
+4. We need to use deprecated router module in order to use priming components, so install router-deprecated module also using the following command<br>
+npm i @angular/router-deprecated<br>
 
 </content>
 </snippet>
