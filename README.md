@@ -18,7 +18,13 @@ npm i @angular/router-deprecated<br>
 4. We need to use deprecated router module in order to use priming components, so install router-deprecated module also using the following command<br>
   * npm i @angular/router-deprecated<br>
 5. Import the project using intellij IDEA and open the angular-cli-build.js file and add the following lines to the vendorNpmFiles array, <br>
-6. Open the system
+6. Open the system system-config.ts in the src directory<br>
+
+ 	-Add 'primeng': 'vendor/primeng' to the const map: any<br>
+  	-Add 'primeng': { defaultExtension: 'js' } to the packages <br>
+  	-Add '@angular/router-deprecated', to barrels<br><br>
+  	
+  	The file will look like this after adding those lines<br>
  
       ```'primeng/**/*.js', ```<br>
       ```'primeui/**/*.*'``` <br>
@@ -44,12 +50,7 @@ module.exports = function(defaults) {
 
 ```
 
-6. Open the system-config.ts in the src directory<br>
-  -Add 'primeng': 'vendor/primeng' to the const map: any<br>
-  -Add 'primeng': { defaultExtension: 'js' } to the packages <br>
-  -Add '@angular/router-deprecated', to barrels<br><br>
 
-The file will look like this after adding those lines<br>
 
 
 
