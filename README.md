@@ -10,14 +10,14 @@ npm install<br>
 npm i @angular/router-deprecated<br>
 
 ## If you want to make your own ng-cli-primeng project from scratch
-1. Create a normal project anywhere using “ng new [project-name]” command in the cmd
-2. Navigate to newly created project folder using “cd [project-name]”
-3. Install priming and primeui using following commands<br>
+- Create a normal project anywhere using “ng new [project-name]” command in the cmd
+- Navigate to newly created project folder using “cd [project-name]”
+- Install priming and primeui using following commands<br>
     * npm install primeng --save<br>
     * npm install primeui –save<br>
-4. We need to use deprecated router module in order to use priming components, so install router-deprecated module also using the following command<br>
+- We need to use deprecated router module in order to use priming components, so install router-deprecated module also using the following command<br>
   * npm i @angular/router-deprecated<br>
-5. Import the project using intellij IDEA and open the angular-cli-build.js file and add the following lines to the vendorNpmFiles array, <br>
+- Import the project using intellij IDEA and open the angular-cli-build.js file and add the following lines to the vendorNpmFiles array, <br>
 
 
       ```'primeng/**/*.js', ```<br>
@@ -44,7 +44,7 @@ module.exports = function(defaults) {
 
 ```
 
-6. Open the system system-config.ts in the src directory<br>
+- Open the system system-config.ts in the src directory<br>
 
  	-Add 'primeng': 'vendor/primeng' to the const map: any<br>
   	-Add 'primeng': { defaultExtension: 'js' } to the packages <br>
@@ -53,11 +53,79 @@ module.exports = function(defaults) {
   	The file will look like this after adding those lines<br>
  
 
+```sh
+/** Map relative paths to URLs. */
+const map: any = {
+  'primeng': 'vendor/primeng'
+};
+
+/** User packages configuration. */
+const packages: any = {
+  'primeng': { defaultExtension: 'js' }
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/***********************************************************************************************
+ * Everything underneath this line is managed by the CLI.
+ **********************************************************************************************/
+const barrels: string[] = [
+  // Angular specific barrels.
+  '@angular/core',
+  '@angular/common',
+  '@angular/compiler',
+  '@angular/http',
+  '@angular/router',
+  '@angular/platform-browser',
+  '@angular/platform-browser-dynamic',
+  '@angular/router-deprecated',
 
 
+```
+
+- Open the index.html in the src directory and add relevant stylesheet links and javascript link to the priming<br>
+
+```sh
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NgCliTest</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="vendor/primeui/themes/omega/theme.css" />
+  <link rel="stylesheet" type="text/css" href="app/resources/icons/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/primeui/primeui-ng-all.min.css" />
+  {{#unless environment.production}}
+  <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
+  {{/unless}}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <ng-cli-test-app>Loading...</ng-cli-test-app>
+
+  <script src="vendor/primeui/primeui-ng-all.min.js"></script>
+
+    {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
+    <script>
+      System.import('system-config.js').then(function () {
+        System.import('main');
+      }).catch(console.error.bind(console));
+    </script>
+</body>
+</html>
 
 
+```
 
+Note: need to copy the font awesome resources to the app/resources folder. You can find them in the priming quick start seed project
+<br>
+Now you can use priming components<br>
+-First need to import components in your component<br>
+import {InputText} from 'primeng/primeng';<br>
+-Then include it in the directives array<br>
+directives: [InputText]<br>
+-Then include in the html<br>
+<input type="text" pInputText/><br>
 
 
 
